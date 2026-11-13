@@ -1,0 +1,638 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f6faf6;
+    color: #20352a;
+    line-height: 1.7;
+    animation: pageFade 0.6s ease both;
+}
+
+header {
+    background: rgba(20, 61, 43, 0.97);
+    backdrop-filter: blur(12px);
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px #143d2b15;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.home-text span,
+.bagian h2 span {
+    color: #8ee4a5;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #e4f1e7;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: color 0.3s ease,
+                background 0.3s ease,
+                transform 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.aktif {
+    color: #8ee4a5;
+    background: #ffffff12;
+}
+
+.navbar a:hover {
+    transform: translateY(-2px);
+}
+
+/* HOME */
+
+.home {
+    min-height: 85vh;
+    padding: 75px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #e4f5e8, #f8fcf8 60%, #d9efdf);
+    overflow: hidden;
+}
+
+.home-text {
+    max-width: 570px;
+    animation: munculKiri 0.9s ease both;
+}
+
+.sapaan {
+    color: #27834c;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.home h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+    color: #143d2b;
+}
+
+.home h3 {
+    color: #27834c;
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+.home-text p {
+    line-height: 1.9;
+    margin-bottom: 28px;
+    color: #52685a;
+}
+
+.tombol {
+    display: inline-block;
+    background: linear-gradient(135deg, #27834c, #14532d);
+    color: white;
+    padding: 13px 27px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 18px #23784730;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tombol:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #23784740;
+}
+
+.foto {
+    animation: munculKanan 0.9s ease both;
+}
+
+.foto img {
+    width: 270px;
+    height: 320px;
+    object-fit: cover;
+    border: 6px solid white;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px #174c2b25;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.foto img:hover {
+    transform: translateY(-7px) rotate(1deg);
+    box-shadow: 0 22px 45px #174c2b35;
+}
+
+/* SEMUA BAGIAN */
+
+.bagian {
+    padding: 85px 10%;
+    text-align: center;
+    min-height: 75vh;
+    scroll-margin-top: 85px;
+    animation: muncul 0.7s ease both;
+}
+
+.bagian h2 {
+    font-size: clamp(27px, 3vw, 36px);
+    color: #174c2b;
+    margin-bottom: 8px;
+}
+
+.bagian h2 span {
+    color: #27834c;
+}
+
+.deskripsi {
+    margin: 15px 0 35px;
+    color: #65766a;
+    line-height: 1.8;
+}
+
+/* PROFIL */
+
+.profil-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.profil-container img {
+    width: 270px;
+    height: 320px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px #174c2b20;
+    animation: munculKiri 0.8s ease both;
+    transition: transform 0.4s ease;
+}
+
+.profil-container img:hover {
+    transform: scale(1.03);
+}
+
+/* KARTU INFORMASI */
+
+.kartu {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    text-align: left;
+    background: white;
+    border: 1px solid #e4eee5;
+    border-left: 5px solid #27834c;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px #174c2b0c;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.profil-container .kartu {
+    flex: 1;
+    animation: munculKanan 0.8s ease both;
+}
+
+.kartu:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px #174c2b15;
+}
+
+.kartu p {
+    padding: 13px 0;
+    border-bottom: 1px solid #e9f0ea;
+    line-height: 1.8;
+}
+
+.kartu p:last-child {
+    border-bottom: none;
+}
+
+.kartu b {
+    color: #237847;
+}
+
+/* ALAMAT */
+
+.alamat {
+    background: linear-gradient(135deg, #e9f5eb, #f4faf5);
+}
+
+.alamat .kartu {
+    animation: kartuNaik 0.8s ease both;
+}
+
+.prestasi-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.prestasi-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e5eee7;
+    border-top: 5px solid #27834c;
+    border-radius: 16px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0 8px 25px #174c2b0d;
+    opacity: 0;
+    animation: kartuMuncul 0.7s ease forwards;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.prestasi-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.prestasi-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.prestasi-card:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.prestasi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px #174c2b20;
+}
+
+.prestasi-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.prestasi-card:hover img {
+    transform: scale(1.03);
+}
+
+.prestasi-card h3 {
+    color: #27834c;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.prestasi-card h4 {
+    margin-bottom: 12px;
+    color: #174c2b;
+    font-size: 18px;
+}
+
+.prestasi-card p {
+    color: #65766a;
+    line-height: 1.8;
+}
+
+
+footer {
+    padding: 25px 15px;
+    background: #143d2b;
+    color: #e4f1e7;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ANIMASI */
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes munculKiri {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes munculKanan {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes kartuNaik {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes kartuMuncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 16px 5%;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+        gap: 30px;
+    }
+
+    .home h1 {
+        font-size: 33px;
+    }
+
+    .foto img {
+        width: 210px;
+        height: 250px;
+    }
+
+    .bagian {
+        padding: 60px 7%;
+        scroll-margin-top: 130px;
+    }
+
+    .bagian h2 {
+        font-size: 28px;
+    }
+
+    .profil-container {
+        flex-direction: column;
+    }
+
+    .profil-container img {
+        width: 220px;
+        height: 270px;
+    }
+
+    .profil-container .kartu {
+        width: 100%;
+    }
+
+    .prestasi-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .prestasi-card {
+        opacity: 1;
+    }
+}
+
+.menu-button,
+.dark-button {
+    border: none;
+    cursor: pointer;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 19px;
+    background: #ffffff20;
+    color: white;
+}
+
+.menu-button {
+    display: none;
+}
+
+.jam-digital {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.sapaan-button {
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.reveal-aktif {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.top-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #27834c;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 5px 15px #0002;
+}
+
+.top-aktif {
+    display: block;
+}
+
+
+body.dark-mode {
+    background: #17251c;
+    color: #e4f1e7;
+}
+
+.dark-mode .home {
+    background: linear-gradient(135deg, #203d2c, #17251c);
+}
+
+.dark-mode .home h1,
+.dark-mode .bagian h2,
+.dark-mode .prestasi-card h4 {
+    color: #e4f1e7;
+}
+
+.dark-mode .home-text p,
+.dark-mode .deskripsi,
+.dark-mode .prestasi-card p {
+    color: #c1d1c5;
+}
+
+.dark-mode .kartu,
+.dark-mode .prestasi-card {
+    background: #263a2d;
+    border-color: #395b43;
+}
+
+.dark-mode .kartu b,
+.dark-mode .prestasi-card h3 {
+    color: #8ee4a5;
+}
+
+.dark-mode .alamat {
+    background: #203328;
+}
+
+.dark-mode .kartu p {
+    border-color: #395b43;
+}
+
+
+@media (max-width: 700px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: #143d2b;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .navbar ul.menu-aktif {
+        display: flex;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul a {
+        width: 100%;
+    }
+
+    .jam-digital {
+        font-size: 13px;
+    }
+
+    .dark-button {
+        font-size: 17px;
+    }
+
+    .sapaan-button {
+        margin: 10px 0 0;
+    }
+}
